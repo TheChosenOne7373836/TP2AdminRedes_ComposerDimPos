@@ -1,0 +1,302 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<style>
+  :host {
+    --bright-blue: oklch(51.01% 0.274 263.83);
+    --electric-violet: oklch(53.18% 0.28 296.97);
+    --french-violet: oklch(47.66% 0.246 305.88);
+    --vivid-pink: oklch(69.02% 0.277 332.77);
+    --hot-red: oklch(61.42% 0.238 15.34);
+    --orange-red: oklch(63.32% 0.24 31.68);
+
+    --gray-900: oklch(19.37% 0.006 300.98);
+    --gray-700: oklch(36.98% 0.014 302.71);
+    --gray-400: oklch(70.9% 0.015 304.04);
+
+    --red-to-pink-to-purple-vertical-gradient: linear-gradient(
+      180deg,
+      var(--orange-red) 0%,
+      var(--vivid-pink) 50%,
+      var(--electric-violet) 100%
+    );
+
+    --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
+      90deg,
+      var(--orange-red) 0%,
+      var(--vivid-pink) 50%,
+      var(--electric-violet) 100%
+    );
+
+    --pill-accent: var(--bright-blue);
+
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th{
+    border: 2px solid rgb(27, 27, 27);
+    padding: 8px;
+    text-align: center;
+  }
+  td {
+    border: 1px solid rgb(201, 201, 201);
+    border-style: dotted;
+    padding: 8px;
+    text-align: center;
+  }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* Background color for the whole page */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #949494;
+    background-color: #fff; /* Background color for the table */
+}
+
+th {
+    background-color: #f2f2f2; /* Background color for table headers */
+    border-style: dotted;
+    color: #333; /* Text color for table headers */
+}
+
+td {
+    background-color: #ffffff; /* Background color for table cells */
+}
+#hora {
+    background-color: #f2f2f2; /* Background color for table headers */
+    border: 2px solid #535353;
+    border-style: dotted;
+    color: #333; /* Text color for table headers */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternate row background color */
+}
+
+tr:hover {
+    background-color: #e2e2e2; /* Hover color for rows */
+}
+</style>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+
+  <main class="main">
+  <div class="content">
+    <div class="left-side">
+    </div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <button (click)="getProgramacion()" class="navbar-brand" href="#">TV</button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+       
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a routerLink="/inicio-conductor"> Conductores</a>                                                             
+            </li>
+          </ul>
+       
+      </div>
+  </nav>
+
+  <!--
+  -->
+ <div class="schedule" id="sc">
+  <div id="dias" class="header"></div>
+  <div id="dias" class="header">Lunes</div>
+  <div id="dias" class="header">Martes</div>
+  <div id="dias" class="header">Miércoles</div>
+  <div id="dias" class="header">Jueves</div>
+  <div id="dias" class="header">Viernes</div>
+  <div id="dias" class="header">Sábado</div>
+  <div id="dias" class="header">Domingo</div>
+  
+  <div id="horas" class="hour0">00:00</div>
+  <div class="content01"></div>
+  <div class="content02"></div>
+  <div class="content03"></div>
+  <div class="content04"></div>
+  <div class="content05"></div>
+  <div class="content06"></div>
+  <div class="content07"></div>
+  
+  <div id="horas" class="hour2">02:00</div>
+  <div class="content21"></div>
+  <div class="content22"></div>
+  <div class="content23"></div>
+  <div class="content24"></div>
+  <div class="content25"></div>
+  <div class="content26"></div>
+  <div class="content27"></div>
+  
+  <div id="horas" class="hour4">04:00</div>
+  <div class="content41"></div>
+  <div class="content42"></div>
+  <div class="content43"></div>
+  <div class="content44"></div>
+  <div class="content45"></div>
+  <div class="content46"></div>
+  <div class="content47"></div>
+
+  <div id="horas" class="hour6">06:00</div>
+  <div class="content61"></div>
+  <div class="content62"></div>
+  <div class="content63"></div>
+  <div class="content64"></div>
+  <div class="content65"></div>
+  <div class="content66"></div>
+  <div class="content67"></div>
+
+  <div id="horas" class="hour8">08:00</div>
+  <div class="content81"></div>
+  <div class="content82"></div>
+  <div class="content83"></div>
+  <div class="content84"></div>
+  <div class="content85"></div>
+  <div class="content86"></div>
+  <div class="content87"></div>
+
+  <div id="horas" class="hour10">10:00</div>
+  <div class="content101"></div>
+  <div class="content102"></div>
+  <div class="content103"></div>
+  <div class="content104"></div>
+  <div class="content105"></div>
+  <div class="content106"></div>
+  <div class="content107"></div>
+
+  <div id="horas" class="hour12">12:00</div>
+  <div class="content121"></div>
+  <div class="content122"></div>
+  <div class="content123"></div>
+  <div class="content124"></div>
+  <div class="content125"></div>
+  <div class="content126"></div>
+  <div class="content127"></div>
+
+  <div id="horas" class="hour14">14:00</div>
+  <div class="content141"></div>
+  <div class="content142"></div>
+  <div class="content143"></div>
+  <div class="content144"></div>
+  <div class="content145"></div>
+  <div class="content146"></div>
+  <div class="content147"></div>
+
+  <div id="horas" class="hour16">16:00</div>
+  <div class="content161"></div>
+  <div class="content162"></div>
+  <div class="content163"></div>
+  <div class="content164"></div>
+  <div class="content165"></div>
+  <div class="content166"></div>
+  <div class="content167"></div>
+
+  <div id="horas" class="hour18">18:00</div>
+  <div class="content181"></div>
+  <div class="content182"></div>
+  <div class="content183"></div>
+  <div class="content184"></div>
+  <div class="content185"></div>
+  <div class="content186"></div>
+  <div class="content187"></div>
+
+  <div id="horas" class="hour20">20:00</div>
+  <div class="content201"></div>
+  <div class="content202"></div>
+  <div class="content203"></div>
+  <div class="content204"></div>
+  <div class="content205"></div>
+  <div class="content206"></div>
+  <div class="content207"></div>
+
+  <div id="horas" class="hour22">22:00</div>
+  <div class="content221"></div>
+  <div class="content222"></div>
+  <div class="content223"></div>
+  <div class="content224"></div>
+  <div class="content225"></div>
+  <div class="content226"></div>
+  <div class="content227"></div>
+
+  <div id="horas" class="hour24">24:00</div>
+  <div class="content241"></div>
+  <div class="content242"></div>
+  <div class="content243"></div>
+  <div class="content244"></div>
+  <div class="content245"></div>
+  <div class="content246"></div>
+  <div class="content247"></div>
+ 
+</div>
+
+
+  </div>
+  <article>
+    <section class="listado-apply">
+      <h2 class="section-heading" >Agregar nuevo programa</h2>
+      <form  id="formT" [formGroup]="applyForm"   (submit)="submitApplication()" > 
+
+        <label for="programName">Nombre del programa:</label>
+        <input type="text" id="programName" formControlName="programName">
+        <br>
+        <label for="lunes">Lunes (Formato -> 01 , 15, 24)</label>
+        <input type="text" id="dia1" formControlName="dia1">
+        <br>
+        <label for="martes">Martes</label>
+        <input type="text" id="dia2" formControlName="dia2">
+        <br>
+        <label for="miercoles">Miércoles</label>
+        <input type="text" id="dia3" formControlName="dia3">
+        <br>
+        <label for="jueves">Jueves</label>
+        <input type="text" id="dia4" formControlName="dia4">
+        <br>
+        <label for="viernes">Viernes</label>
+        <input type="text" id="dia5" formControlName="dia5">
+        <br>
+        <label for="sabado">Sábado</label>
+        <input type="text" id="dia6" formControlName="dia6">
+        <br>
+        <label for="domingo">Domingo</label>
+        <input type="text" id="dia7" formControlName="dia7">
+        <button type="submit" class="primary">Enviar</button>
+      </form>
+    </section>
+  </article>
+  </main>
+
+  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+  <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
+  <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
+  <!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
+  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+  <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
+  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+  
+

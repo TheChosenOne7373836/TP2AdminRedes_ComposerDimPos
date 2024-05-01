@@ -1,0 +1,87 @@
+
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 4.5rem; /* Increase title font size */
+  margin-bottom: 10px; /* Add some space below title */
+}
+
+.card-text {
+  font-size: 2rem; /* Increase text font size */
+  color: #555; /* Darken text color */
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+  background-color: #f8f9fa; /* Set a background color */
+}
+
+.card {
+  width: 80%; /* Set the width */
+  height: 500px; /* Set the maximum height */
+  overflow: auto; /* Add scrollbars if content overflows */
+  border: 1px solid #ddd;
+  left : 10%;
+  top: 100px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  /*display: flex;
+  flex-direction: column;
+*/}
+#formT {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#formT label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#formT input[type="text"] {
+  width: calc(100% - 10px);
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#formT button.primary {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#formT button.primary:hover {
+  background-color: #0056b3;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+#b{
+  
+  float: right;
+  margin-right: 10px;
+}

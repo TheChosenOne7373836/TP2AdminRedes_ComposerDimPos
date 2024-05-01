@@ -1,0 +1,53 @@
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+<main>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a routerLink="/inicio">TV</a>
+      <button id="boton"class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a routerLink="/inicio-conductor">Conductores</a>                                                                 
+          </li>
+        </ul>
+
+   
+    </div>
+  </nav>
+
+
+  <div class="card mb-9">
+    <div class="row g-0">
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{ nombre }} {{ apellido }}</h5>
+        </div>
+      </div>
+    </div>
+    <article>
+      <section class="listado-apply">
+        <h2 class="section-heading" >Modificar conductor</h2>
+       <form  id="formT" [formGroup]="updateForm" (submit)="modificar()" > 
+          <label for="nombre">Nombre del Conductor:</label>
+          <input type="text" id="nombre" formControlName="nombre">
+          <br>
+          <label for="apellido">Apellido del Conductor:</label>
+          <input type="text" id="apellido" formControlName="apellido">
+          <br>
+          <label for="edad">Edad del Conductor:</label>
+          <input type="text" id="edad" formControlName="edad">
+          <br>
+          <button type="submit"  class="primary" id="b">Modificar</button>
+          <button (click)="eliminar()" routerLink="/inicio"  type="button" class="btn btn-danger">Eliminar</button>
+          </form> 
+      </section>
+    </article>
+  </div>
+ 
+</main>
